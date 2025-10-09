@@ -6,6 +6,8 @@ Capybara.app = eval("Rack::Builder.new {( " + File.read(File.dirname(__dir__) + 
 
 Capybara.javascript_driver = :selenium_chrome_headless
 Capybara.server = :webrick
+Capybara.default_max_wait_time = 5
+Capybara.default_normalize_ws = true
 
 RSpec.configure do |config|
   config.mock_with :rspec
